@@ -4,84 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido | Formulario de Registro</title>
+    <title>Iniciar Sesión | Portal de Acceso</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
 
-    <main class="container">
-        <section class="form-card">
-            <div style="margin-bottom: 16px;">
-                <a href="index.html"
-                    style="color: #94a3b8; text-decoration: none; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s ease;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                    </svg>
-                    Volver al inicio
-                </a>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">
+                Mi Página Web
+                <span class="logo-badge">LOGIN</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="login.html" class="active">Iniciar Sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form-center-wrapper">
+        <div class="form-box">
+            <a href="index.html" class="back-link">
+                ← Volver al inicio
+            </a>
+
+            <div class="form-header">
+                <h1>Iniciar Sesión</h1>
+                <p>Ingresa tus datos para acceder al formulario de contacto.</p>
             </div>
 
-            <header class="card-header">
-                <span class="badge">
-                    <span class="badge-dot"></span>
-                    Portal de Acceso
-                </span>
-                <h1 class="card-title">Hola Mundo</h1>
-                <p class="card-subtitle">Bienvenido a mi página web. Ingresa tus datos para continuar.</p>
-            </header>
+            <div id="errorAlert" class="alert-box alert-danger">
+                <span>⚠️ Usuario o contraseña incorrectos.</span>
+            </div>
 
-            <form action="/submit" method="post" id="contactForm">
+            <div id="successAlert" class="alert-box alert-success">
+                <span>✅ Acceso correcto. Redirigiendo a contactos...</span>
+            </div>
+
+            <form id="loginForm">
                 <div class="form-group">
-                    <label for="nombre" class="form-label">Nombre completo</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Juan Pérez"
-                            required autocomplete="name">
-                    </div>
+                    <label for="username" class="form-label">Usuario</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        class="form-input" 
+                        placeholder="Ej. admin" 
+                        required 
+                        autocomplete="username"
+                        autofocus
+                    >
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="nombre@ejemplo.com"
-                            required autocomplete="email">
-                    </div>
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-input" 
+                        placeholder="••••••••" 
+                        required 
+                        autocomplete="current-password"
+                    >
                 </div>
 
-                <button type="submit" id="submitBtn" class="btn-submit">
-                    <span>Enviar datos</span>
-                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="m5 12 14 0"></path>
-                        <path d="m13 18 6-6"></path>
-                        <path d="m13 6 6 6"></path>
-                    </svg>
+                <button type="submit" class="btn-primary" style="margin-top: 24px;">
+                    Ingresar al sistema →
                 </button>
             </form>
 
-            <footer class="info-box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sit dolorum ullam voluptate facilis
-                    accusamus cupiditate sapiente.</p>
-            </footer>
-        </section>
-    </main>
+            <div class="hint-box">
+                Credenciales de prueba: <strong>admin</strong> / <strong>1234</strong>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2026 Mi Página Web — Acceso de usuarios</p>
+    </footer>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const errorAlert = document.getElementById('errorAlert');
+        const successAlert = document.getElementById('successAlert');
+
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const user = usernameInput.value.trim();
+            const pass = passwordInput.value.trim();
+
+            if (user === 'admin' && pass === '1234') {
+                errorAlert.style.display = 'none';
+                successAlert.style.display = 'flex';
+
+                // Guardar bandera de sesión para acceso
+                sessionStorage.setItem('usuario_autenticado', 'admin');
+
+                // Redirigir al formulario de contacto
+                setTimeout(() => {
+                    window.location.href = 'contacto.html';
+                }, 700);
+            } else {
+                successAlert.style.display = 'none';
+                errorAlert.style.display = 'flex';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        });
+    </script>
+
 </body>
 
 </html>

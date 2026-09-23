@@ -3,30 +3,110 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <h1>Contáctanos</h1>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-text">
+                Mi Página Web
+                <span class="logo-badge">CONTACTO</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="contacto.html" class="active">Contacto</a>
+                <a href="login.html" id="authNavBtn" class="btn-nav">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </header>
 
-    <p>Esta página fue creada desde la rama Kevin.</p>
+    <div class="form-center-wrapper">
+        <div class="form-box">
+            <a href="index.html" class="back-link">
+                ← Volver al inicio
+            </a>
 
-    <form>
-        <label>Nombre:</label>
-        <input type="text">
+            <div class="form-header">
+                <h1>Contáctanos</h1>
+                <p>Déjanos tu mensaje y nos pondremos en contacto contigo a la brevedad.</p>
+            </div>
 
-        <br><br>
+            <div id="contactSuccess" class="alert-box alert-success">
+                <span>✅ ¡Mensaje enviado con éxito! Nos comunicaremos pronto.</span>
+            </div>
 
-        <label>Correo:</label>
-        <input type="email">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        class="form-input" 
+                        placeholder="Ej. Alberth Ramos" 
+                        required
+                    >
+                </div>
 
-        <br><br>
+                <div class="form-group">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input 
+                        type="email" 
+                        id="correo" 
+                        name="correo" 
+                        class="form-input" 
+                        placeholder="tu-correo@ejemplo.com" 
+                        required
+                    >
+                </div>
 
-        <button>Enviar</button>
-    </form>
+                <div class="form-group">
+                    <label for="mensajeTexto" class="form-label">Mensaje</label>
+                    <textarea 
+                        id="mensajeTexto" 
+                        name="mensaje" 
+                        class="form-textarea" 
+                        placeholder="Escribe tu consulta o mensaje aquí..." 
+                        required
+                    ></textarea>
+                </div>
 
-    <h1>Contáctanos</h1>A
+                <button type="submit" class="btn-primary" style="margin-top: 20px;">
+                    Enviar Mensaje →
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2026 Mi Página Web — Sección de Contacto</p>
+    </footer>
+
+    <script>
+        // Manejo del formulario de contacto
+        const contactForm = document.getElementById('contactForm');
+        const contactSuccess = document.getElementById('contactSuccess');
+
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            contactSuccess.style.display = 'flex';
+            contactForm.reset();
+
+            setTimeout(() => {
+                contactSuccess.style.display = 'none';
+            }, 4000);
+        });
+
+        // Configurar botón de cerrar sesión
+        const authBtn = document.getElementById('authNavBtn');
+        authBtn.addEventListener('click', function () {
+            sessionStorage.removeItem('usuario_autenticado');
+        });
+    </script>
 
 </body>
 
