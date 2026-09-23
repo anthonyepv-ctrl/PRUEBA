@@ -1,9 +1,10 @@
 # HOLA GRUPO UN GUSTO
 
-ese p
 
-pita mongol
 
-perdon pita![alt text](image.png)
+perdon pita![alt text]
 
 pita te amo
+perdon pita!
+
+# ESE PE
