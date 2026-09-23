@@ -1,28 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
-</head>
-<body>
-    <h1>Hola Mundo</h1>
-    <h2>Bienvenido a mi página web</h2>
-    <form action="/submit" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <br><br>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <input type="submit" value="Enviar">
-    </form>
-    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sit dolorum ullam voluptate. Dolorum facilis accusamus cupiditate sapiente, itaque doloremque, nesciunt nostrum quam quis quidem provident deserunt minus, sit amet.
-        
-    </h3>
+<<<<<<< HEAD
+    <title>Bienvenido | Formulario de Registro</title>
+    <link rel="stylesheet" href="styles.css">
+=======
+    <title>Mi Página Web</title>
 
-        <p align="center">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIRRRbs0yrmxOkCYmO-PnkJzdZqToQj3sAzPYsTJTT5FHT8teq4SOs5JE&s=10" width="300">
-    </p>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #1e40af;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .hero {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg,
+                    #60a5fa,
+                    #2563eb);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px #ccc;
+            text-align: center;
+        }
+
+        .card button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #1e40af;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+>>>>>>> 56551621fb135b325e7e5766e7cea2e948582dfe
+</head>
+
+<body>
+<<<<<<< HEAD
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <main class="container">
+        <section class="form-card">
+            <header class="card-header">
+                <span class="badge">
+                    <span class="badge-dot"></span>
+                    Portal de Acceso
+                </span>
+                <h1 class="card-title">Hola Mundo</h1>
+                <p class="card-subtitle">Bienvenido a mi página web. Ingresa tus datos para continuar.</p>
+            </header>
+
+            <form action="/submit" method="post" id="contactForm">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre completo</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            class="form-input" 
+                            placeholder="Ej. Juan Pérez" 
+                            required 
+                            autocomplete="name"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="nombre@ejemplo.com" 
+                            required 
+                            autocomplete="email"
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-submit">
+                    <span>Enviar datos</span>
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m5 12 14 0"></path>
+                        <path d="m13 18 6-6"></path>
+                        <path d="m13 6 6 6"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <footer class="info-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sit dolorum ullam voluptate facilis accusamus cupiditate sapiente.</p>
+            </footer>
+        </section>
+    </main>
+=======
+
+    <header>
+        <h1>Mi Primera Página Web</h1>
+        <p>Proyecto colaborativo con GitHub</p>
+    </header>
+
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+
+    <section class="hero">
+        <div>
+            <h1>Bienvenidos 🚀</h1>
+            <p>Aprendiendo desarrollo web</p>
+        </div>
+    </section>
+
+
+    <section class="contenido">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>Estructura de la página web.</p>
+            <button onclick="mensaje('HTML')">
+                Ver más
+            </button>
+        </div>
+
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>Diseño y estilos visuales.</p>
+            <button onclick="mensaje('CSS')">
+                Ver más
+            </button>
+        </div>
+
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>Interactividad del sitio.</p>
+            <button onclick="mensaje('JavaScript')">
+                Ver más
+            </button>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 Mi Página Web</p>
+    </footer>
+
+
+    <script>
+
+        function mensaje(tecnologia) {
+            alert("Seleccionaste: " + tecnologia);
+        }
+
+    </script>
+
+
+>>>>>>> 56551621fb135b325e7e5766e7cea2e948582dfe
 </body>
+
 </html>
